@@ -1,0 +1,106 @@
+{
+    "info": {
+      "_postman_id": "f0e3a460-ccad-41b9-bf22-101dbb6746be",
+      "name": "User Authentication API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+      "_exporter_id": "12536023"
+    },
+    "item": [
+      {
+        "name": "Auth",
+        "item": [
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "formdata",
+                "formdata": [
+                  {
+                    "key": "name",
+                    "value": "Joséss",
+                    "type": "text"
+                  },
+                  {
+                    "key": "surname",
+                    "value": "Balenciagass",
+                    "type": "text"
+                  },
+                  {
+                    "key": "username",
+                    "value": "jbalenciaga3",
+                    "type": "text"
+                  },
+                  {
+                    "key": "email",
+                    "value": "jbalenciaga3@gmail.com",
+                    "type": "text"
+                  },
+                  {
+                    "key": "phone",
+                    "value": "22160098",
+                    "type": "text"
+                  },
+                  {
+                    "key": "password",
+                    "value": "1234",
+                    "type": "text"
+                  },
+                  {
+                    "key": "role",
+                    "value": "ADMIN_ROLE",
+                    "type": "text"
+                  },
+                  {
+                    "key": "profilePicture",
+                    "type": "file",
+                    "src": "postman-cloud:///file-id-placeholder"
+                  }
+                ]
+              },
+              "url": {
+                "raw": "http://localhost:5000/register",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "5000",
+                "path": [
+                  "register"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\r\n  \"email\": \"jbalenciaga3@gmail.com\",\r\n  \"username\": \"jbalenciaga3\",\r\n  \"password\": \"1234\"\r\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "http://localhost:5000/login",
+                "host": [
+                  "http://localhost"
+                ],
+                "port": "5000",
+                "path": [
+                  "login"
+                ]
+              }
+            },
+            "response": []
+          }
+        ]
+      }
+    ]
+  }
+  

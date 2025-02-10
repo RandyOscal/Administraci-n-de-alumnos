@@ -1,0 +1,233 @@
+{
+	"info": {
+	  "_postman_id": "1234-abcd-5678-efgh-91011ijklm",
+	  "name": "User and Course API",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+	  "_exporter_id": "12536023"
+	},
+	"item": [
+	  {
+		"name": "Users",
+		"item": [
+		  {
+			"name": "Get User by ID",
+			"request": {
+			  "method": "GET",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/findUser/:uid",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "findUser",
+				  ":uid"
+				]
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Get All Users",
+			"request": {
+			  "method": "GET",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": []
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Delete User",
+			"request": {
+			  "method": "DELETE",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/deleteUser/:uid",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "deleteUser",
+				  ":uid"
+				]
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Update Password",
+			"request": {
+			  "method": "PATCH",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\"password\": \"new_password\"}",
+				"options": {
+				  "raw": {
+					"language": "json"
+				  }
+				}
+			  },
+			  "url": {
+				"raw": "http://localhost:5000/updatePassword/:uid",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "updatePassword",
+				  ":uid"
+				]
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Update User",
+			"request": {
+			  "method": "PUT",
+			  "header": [],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\"name\": \"new_name\", \"surname\": \"new_surname\", \"phone\": \"new_phone\"}",
+				"options": {
+				  "raw": {
+					"language": "json"
+				  }
+				}
+			  },
+			  "url": {
+				"raw": "http://localhost:5000/updateUser/:uid",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "updateUser",
+				  ":uid"
+				]
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Assign Course to Student",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/assignCourse/:uid",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "assignCourse",
+				  ":uid"
+				]
+			  },
+			  "body": {
+				"mode": "raw",
+				"raw": "{\"courseId\": \"course_id\"}",
+				"options": {
+				  "raw": {
+					"language": "json"
+				  }
+				}
+			  }
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Courses",
+		"item": [
+		  {
+			"name": "Create Course",
+			"request": {
+			  "method": "POST",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/createCourse",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "createCourse"
+				]
+			  },
+			  "body": {
+				"mode": "raw",
+				"raw": "{\"title\": \"New Course\", \"description\": \"Course Description\"}",
+				"options": {
+				  "raw": {
+					"language": "json"
+				  }
+				}
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Update Course",
+			"request": {
+			  "method": "PUT",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/updateCourse/:courseId",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "updateCourse",
+				  ":courseId"
+				]
+			  },
+			  "body": {
+				"mode": "raw",
+				"raw": "{\"title\": \"Updated Course Title\", \"description\": \"Updated Course Description\"}",
+				"options": {
+				  "raw": {
+					"language": "json"
+				  }
+				}
+			  }
+			},
+			"response": []
+		  },
+		  {
+			"name": "Delete Course",
+			"request": {
+			  "method": "DELETE",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:5000/deleteCourse/:courseId",
+				"host": [
+				  "http://localhost"
+				],
+				"port": "5000",
+				"path": [
+				  "deleteCourse",
+				  ":courseId"
+				]
+			  }
+			},
+			"response": []
+		  }
+		]
+	  }
+	]
+  }
+  
